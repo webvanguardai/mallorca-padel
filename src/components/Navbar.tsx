@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Players", href: "#players" },
-  { label: "Results", href: "#results" },
-  { label: "Prizes", href: "#prizes" },
-  { label: "Location", href: "#location" },
-  { label: "Download", href: "#download" },
+  { label: "Torneo", href: "#about" },
+  { label: "Jugadores", href: "#players" },
+  { label: "Resultados", href: "#results" },
+  { label: "Premios", href: "#prizes" },
+  { label: "Ubicación", href: "#location" },
+  { label: "Descargar", href: "#download" },
 ];
 
 export default function Navbar() {
@@ -22,114 +22,142 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Cerrar menu al hacer scroll
+  useEffect(() => {
+    if (scrolled && mobileOpen) setMobileOpen(false);
+  }, [scrolled]);
+
   return (
     <>
+      {/* Línea superior naranja */}
+      <div className="fixed top-0 left-0 right-0 h-[2px] bg-padel-orange z-50" />
+
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-[2px] left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
-            ? "bg-dark-navy/95 backdrop-blur-md shadow-2xl py-3"
-            : "bg-transparent py-5"
+            ? "bg-[#0d1f2d]/95 backdrop-blur-md shadow-2xl"
+            : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-padel-orange rounded-lg flex items-center justify-center font-heading font-bold text-white text-xl group-hover:rotate-12 transition-transform duration-300">
+          <a href="#" className="flex items-center gap-2.5 group flex-shrink-0">
+            <div className="w-9 h-9 bg-padel-orange flex items-center justify-center font-heading font-black text-white text-lg group-hover:rotate-12 transition-transform duration-300">
               M
             </div>
-            <div className="hidden sm:block">
-              <span className="text-white font-heading font-bold text-lg tracking-wide">
-                MPC
-              </span>
-              <span className="text-padel-orange text-xs block -mt-1 font-body tracking-widest uppercase">
-                2026
-              </span>
+            <div>
+              <span className="text-white font-heading font-bold text-base tracking-wide">MPC</span>
+              <span className="text-padel-orange text-[10px] block -mt-0.5 tracking-widest uppercase">2026</span>
             </div>
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop Links */}
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-padel-orange transition-colors duration-300 text-sm font-medium tracking-wide uppercase"
+                className="text-white/70 hover:text-padel-orange transition-colors duration-200 text-xs font-medium tracking-widest uppercase"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden lg:block">
+          {/* CTA Desktop */}
+          <div className="hidden lg:block flex-shrink-0">
             <a
               href="#register"
-              className="bg-padel-orange text-white font-bold px-6 py-2.5 rounded-lg hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:shadow-padel-orange/30 text-sm uppercase tracking-wider"
+              className="bg-padel-orange text-white font-bold px-5 py-2 text-xs uppercase tracking-wider hover:bg-orange-600 transition-all duration-300"
+              style={{ clipPath: "polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%)" }}
             >
-              Register Now
+              Inscribirse
             </a>
           </div>
 
-          {/* Mobile Toggle */}
+          {/* Hamburger Mobile */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-2"
+            className="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 flex-shrink-0"
             aria-label="Toggle menu"
           >
-            <div className="w-6 flex flex-col gap-1.5">
-              <span
-                className={`block h-0.5 bg-white transition-all duration-300 ${
-                  mobileOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              />
-              <span
-                className={`block h-0.5 bg-white transition-all duration-300 ${
-                  mobileOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block h-0.5 bg-white transition-all duration-300 ${
-                  mobileOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              />
-            </div>
+            <motion.span
+              animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-white origin-center"
+            />
+            <motion.span
+              animate={mobileOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-white"
+            />
+            <motion.span
+              animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-white origin-center"
+            />
           </button>
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — full screen overlay */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-dark-navy/98 backdrop-blur-lg flex flex-col items-center justify-center gap-8 lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-30 bg-[#0a1922]/98 backdrop-blur-xl flex flex-col"
           >
-            {navLinks.map((link, i) => (
+            {/* Línea naranja top en el overlay también */}
+            <div className="h-[2px] bg-padel-orange flex-shrink-0" />
+
+            {/* Header del menu */}
+            <div className="px-5 h-16 flex items-center justify-between flex-shrink-0">
+              <span className="text-white font-heading font-bold text-base">MPC 2026</span>
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="text-white/60 hover:text-white w-10 h-10 flex items-center justify-center"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Links centrados */}
+            <div className="flex-1 flex flex-col items-center justify-center gap-2 px-5">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.06, duration: 0.3 }}
+                  className="text-white/80 hover:text-padel-orange text-3xl font-heading font-black uppercase tracking-wide transition-colors duration-200 py-2"
+                >
+                  {link.label}
+                </motion.a>
+              ))}
+
+              {/* CTA en mobile */}
               <motion.a
-                key={link.href}
-                href={link.href}
+                href="#register"
                 onClick={() => setMobileOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="text-white text-2xl font-heading font-bold hover:text-padel-orange transition-colors"
+                transition={{ delay: 0.4 }}
+                className="mt-6 bg-padel-orange text-white font-bold px-8 py-3.5 text-sm uppercase tracking-widest hover:bg-orange-600 transition-all duration-300"
               >
-                {link.label}
+                Inscribirse Ahora
               </motion.a>
-            ))}
-            <a
-              href="#register"
-              onClick={() => setMobileOpen(false)}
-              className="btn-primary mt-4"
-            >
-              Register Now
-            </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
