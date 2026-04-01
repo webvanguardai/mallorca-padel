@@ -1,9 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import en from "@/i18n/en";
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
+import en, { type Translations } from "@/i18n/en";
 import es from "@/i18n/es";
-import type { Translations } from "@/i18n/en";
 
 type Lang = "en" | "es";
 
@@ -14,6 +13,8 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+const translations: Record<Lang, Translations> = { en, es };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
@@ -30,10 +31,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("mpc-lang", newLang);
   };
 
-  const t = lang === "es" ? es : en;
-
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t }}>
+    <LanguageContext.Provider value={{ lang, t: translations[lang], setLang }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -41,8 +40,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
 export function useLanguage() {
   const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
+  if (!context) throw new Error("useLanguage must be used within LanguageProvider");
   return context;
 }

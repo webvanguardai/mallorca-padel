@@ -13,18 +13,27 @@ export default function Location() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
-            <span className="text-padel-orange font-bold text-sm uppercase tracking-[0.2em] mb-3 block">{t.location.label}</span>
+            <span className="text-padel-orange font-bold text-sm uppercase tracking-[0.2em] mb-3 block">
+              {t.location.label}
+            </span>
             <h2 className="section-title text-white mb-6">
               {t.location.title} <span className="gradient-text">{t.location.titleHighlight}</span>
             </h2>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">{t.location.description}</p>
+            <p
+              className="text-white/70 text-lg leading-relaxed mb-8"
+              dangerouslySetInnerHTML={{ __html: t.location.description }}
+            />
 
             <div className="space-y-4 mb-8">
-              {t.location.items.map((item) => (
+              {t.location.info.map((item) => (
                 <div key={item.label} className="flex items-start gap-4 group">
-                  <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
+                  <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </span>
                   <div>
-                    <span className="text-white/40 text-xs uppercase tracking-wider block">{item.label}</span>
+                    <span className="text-white/40 text-xs uppercase tracking-wider block">
+                      {item.label}
+                    </span>
                     <span className="text-white font-medium">{item.value}</span>
                   </div>
                 </div>
@@ -40,7 +49,7 @@ export default function Location() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-              {t.location.hotelBtn}
+              {t.location.button}
             </a>
           </AnimatedSection>
 

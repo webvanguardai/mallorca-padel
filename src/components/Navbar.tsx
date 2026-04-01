@@ -4,19 +4,35 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 
+function LanguageToggle() {
+  const { lang, setLang } = useLanguage();
+  return (
+    <div className="bg-white/10 rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1">
+      <button
+        onClick={() => setLang("en")}
+        className={`px-1.5 py-0.5 rounded-full transition-colors duration-200 ${
+          lang === "en" ? "text-padel-orange" : "text-white/50 hover:text-white/80"
+        }`}
+      >
+        EN
+      </button>
+      <span className="text-white/30">|</span>
+      <button
+        onClick={() => setLang("es")}
+        className={`px-1.5 py-0.5 rounded-full transition-colors duration-200 ${
+          lang === "es" ? "text-padel-orange" : "text-white/50 hover:text-white/80"
+        }`}
+      >
+        ES
+      </button>
+    </div>
+  );
+}
+
 export default function Navbar() {
-  const { lang, setLang, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const navLinks = [
-    { label: t.nav.tournament, href: "#about" },
-    { label: t.nav.players, href: "#players" },
-    { label: t.nav.results, href: "#results" },
-    { label: t.nav.prizes, href: "#prizes" },
-    { label: t.nav.location, href: "#location" },
-    { label: t.nav.download, href: "#download" },
-  ];
+  const { t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -26,32 +42,11 @@ export default function Navbar() {
 
   useEffect(() => {
     if (scrolled && mobileOpen) setMobileOpen(false);
-  }, [scrolled, mobileOpen]);
-
-  const LanguageToggle = () => (
-    <div className="bg-white/10 rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1">
-      <button
-        onClick={() => setLang("en")}
-        className={`px-1.5 py-0.5 rounded-full transition-colors duration-200 ${
-          lang === "en" ? "text-padel-orange" : "text-white/50 hover:text-white/70"
-        }`}
-      >
-        EN
-      </button>
-      <span className="text-white/30">|</span>
-      <button
-        onClick={() => setLang("es")}
-        className={`px-1.5 py-0.5 rounded-full transition-colors duration-200 ${
-          lang === "es" ? "text-padel-orange" : "text-white/50 hover:text-white/70"
-        }`}
-      >
-        ES
-      </button>
-    </div>
-  );
+  }, [scrolled]);
 
   return (
     <>
+      {/* Línea superior naranja */}
       <div className="fixed top-0 left-0 right-0 h-[2px] bg-padel-orange z-50" />
 
       <motion.nav
@@ -65,6 +60,8 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
+          {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group flex-shrink-0">
             <div className="w-9 h-9 bg-padel-orange flex items-center justify-center font-heading font-black text-white text-lg group-hover:rotate-12 transition-transform duration-300">
               M
@@ -75,8 +72,9 @@ export default function Navbar() {
             </div>
           </a>
 
+          {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-            {navLinks.map((link) => (
+            {t.nav.links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -87,6 +85,7 @@ export default function Navbar() {
             ))}
           </div>
 
+          {/* Language Toggle + CTA Desktop */}
           <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
             <LanguageToggle />
             <a
@@ -94,10 +93,11 @@ export default function Navbar() {
               className="bg-padel-orange text-white font-bold px-5 py-2 text-xs uppercase tracking-wider hover:bg-orange-600 transition-all duration-300"
               style={{ clipPath: "polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%)" }}
             >
-              {t.nav.register}
+              {t.nav.cta}
             </a>
           </div>
 
+          {/* Hamburger Mobile */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 flex-shrink-0 transition-opacity duration-200 ${mobileOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
@@ -122,6 +122,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
+      {/* Mobile Menu — full screen overlay */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -131,8 +132,10 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-50 bg-[#0a1922]/98 backdrop-blur-xl flex flex-col"
           >
+            {/* Línea naranja top en el overlay también */}
             <div className="h-[2px] bg-padel-orange flex-shrink-0" />
 
+            {/* Header del menu */}
             <div className="px-5 h-16 flex items-center justify-between flex-shrink-0">
               <span className="text-white font-heading font-bold text-base">MPC 2026</span>
               <button
@@ -145,8 +148,9 @@ export default function Navbar() {
               </button>
             </div>
 
+            {/* Links centrados */}
             <div className="flex-1 flex flex-col items-center justify-center gap-2 px-5">
-              {navLinks.map((link, i) => (
+              {t.nav.links.map((link, i) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
@@ -160,6 +164,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
 
+              {/* Language Toggle in mobile */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -169,6 +174,7 @@ export default function Navbar() {
                 <LanguageToggle />
               </motion.div>
 
+              {/* CTA en mobile */}
               <motion.a
                 href="#register"
                 onClick={() => setMobileOpen(false)}
@@ -177,7 +183,7 @@ export default function Navbar() {
                 transition={{ delay: 0.4 }}
                 className="mt-4 bg-padel-orange text-white font-bold px-8 py-3.5 text-sm uppercase tracking-widest hover:bg-orange-600 transition-all duration-300"
               >
-                {t.nav.register}
+                {t.nav.ctaMobile}
               </motion.a>
             </div>
           </motion.div>
