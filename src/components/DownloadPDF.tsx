@@ -18,7 +18,15 @@ export default function DownloadPDF() {
       {/* Top diagonal */}
       <div className="bg-white h-20 diagonal-clip" />
 
-      <div className="bg-gradient-to-br from-deep-blue via-dark-navy to-deep-blue section-padding -mt-1 noise-overlay court-lines relative">
+      <div
+        className="section-padding -mt-1 noise-overlay relative"
+        style={{
+          backgroundColor: "#0f2233",
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(135deg, #1a3a52 0%, #0f2233 50%, #1a3a52 100%)",
+          backgroundSize: "60px 60px, 60px 60px, 100% 100%",
+        }}
+      >
         <div className="max-w-5xl mx-auto relative z-10">
           <AnimatedSection>
             <div className="text-center mb-12">

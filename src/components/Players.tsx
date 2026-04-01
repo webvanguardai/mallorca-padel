@@ -15,7 +15,16 @@ const players = [
 
 export default function Players() {
   return (
-    <section id="players" className="section-padding bg-deep-blue relative overflow-hidden noise-overlay court-lines">
+    <section
+      id="players"
+      className="section-padding relative overflow-hidden noise-overlay"
+      style={{
+        backgroundColor: "#1a3a52",
+        backgroundImage:
+          "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
+        backgroundSize: "60px 60px",
+      }}
+    >
       <div className="absolute top-10 left-10 w-40 h-40 border border-padel-orange/10 rounded-full" />
       <div className="absolute bottom-10 right-10 w-60 h-60 border border-padel-orange/10 rounded-full" />
 
