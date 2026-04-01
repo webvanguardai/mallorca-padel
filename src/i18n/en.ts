@@ -1,54 +1,53 @@
 const en = {
-  // Navbar
-  nav: {
-    tournament: "Tournament",
-    players: "Participants",
-    results: "Results",
-    prizes: "Included",
-    location: "Location",
-    download: "Download",
-    register: "Register",
-    langToggle: "ES",
-  },
-
   // Hero
   hero: {
-    badge: "August 6–9, 2026 · Mallorca",
-    title1: "MALLORCA",
-    title2: "PADEL",
-    title3: "CAMP",
+    badge: "🏸 August 6–9, 2026 · Mallorca",
     subtitle: "4 days of padel, sun and Mediterranean. Coaching sessions, sunset boat trip, Corcuera Cup and accommodation at Tomir Portals Suites.",
-    cta1: "Register",
-    cta2: "Download Breakdown",
+    ctaRegister: "Register",
+    ctaDownload: "Download Breakdown",
     stats: [
       { number: "4", label: "Days", icon: "📅" },
       { number: "3", label: "Sessions", icon: "🏸" },
       { number: "1", label: "Boat Trip", icon: "⛵" },
       { number: "5★", label: "Hotel", icon: "🏨" },
     ],
+    scroll: "Scroll",
+  },
+
+  // Navbar
+  nav: {
+    links: [
+      { label: "Tournament", href: "#about" },
+      { label: "Players", href: "#players" },
+      { label: "Results", href: "#results" },
+      { label: "Included", href: "#prizes" },
+      { label: "Location", href: "#location" },
+      { label: "Download", href: "#download" },
+    ],
+    cta: "Register",
+    ctaMobile: "Register Now",
   },
 
   // TournamentInfo
   tournament: {
-    label: "The Camp",
-    title: "What is",
+    label: "The Tournament",
+    title: "What is the",
     titleHighlight: "MPC?",
-    description: "The Mallorca Padel Camp is a 4-day experience combining top-level padel, accommodation at Tomir Portals Suites and the best of the Mediterranean. Coaching, Corcuera Cup and sunset boat trip included.",
-    scheduleTitle: "Camp Schedule",
+    description: "The Mallorca Padel Camp is a 4-day experience combining top-level padel, accommodation at Tomir Portals Suites and the best of the Mediterranean. Coaching, competition and boat trip included.",
     categories: [
       {
         title: "Padel Coaching",
         icon: "🏸",
         teams: "3 Sessions",
         format: "Morning & Evening",
-        description: "Professional coaching sessions on court. Improve your technique with expert coaches in the best Mediterranean setting.",
+        description: "Professional on-court coaching sessions. Improve your technique with expert coaches in the best Mediterranean setting.",
       },
       {
         title: "Corcuera Cup",
         icon: "🏆",
-        teams: "Included tournament",
+        teams: "Tournament included",
         format: "Day 3 · 5pm–9pm",
-        description: "Official Corcuera Cup competition with all camp participants. The highlight of the weekend.",
+        description: "Official Corcuera Cup competition with all camp participants. The most anticipated moment of the weekend.",
       },
       {
         title: "Boat Trip",
@@ -59,11 +58,12 @@ const en = {
       },
     ],
     schedule: [
-      { day: "Wed 6 Aug", event: "Arrival · Transfer to hotel · 1st padel session 5pm–7pm", icon: "✈️" },
+      { day: "Wed 6 Aug", event: "Arrival · Hotel transfer · 1st padel session 5pm–7pm", icon: "✈️" },
       { day: "Thu 7 Aug", event: "Breakfast · Morning session 10am–12pm · Sunset boat trip 3pm–7pm", icon: "⛵" },
       { day: "Fri 8 Aug", event: "Breakfast · Morning session 11am–1pm · Corcuera Cup 5pm–9pm", icon: "🏆" },
-      { day: "Sat 9 Aug", event: "Breakfast · Final session 11am–1pm · Palma city tour · Airport transfer 6pm", icon: "🌅" },
+      { day: "Sat 9 Aug", event: "Breakfast · Final session 11am–1pm · Palma tour · Airport transfer 6pm", icon: "🌅" },
     ],
+    scheduleTitle: "Tournament Schedule",
   },
 
   // Location
@@ -71,26 +71,27 @@ const en = {
     label: "Venue",
     title: "Tomir",
     titleHighlight: "Portals Suites",
-    description: "Accommodation included at Tomir Portals Suites, one of Mallorca's most exclusive hotels. Portals Nous, minutes from the sea with direct access to the best padel courts on the island.",
-    items: [
+    description: 'Accommodation included at <strong class="text-white">Tomir Portals Suites</strong>, one of the most exclusive hotels in Mallorca. Portals Nous, minutes from the sea with direct access to the best padel courts on the island.',
+    info: [
       { icon: "🏨", label: "Hotel", value: "Tomir Portals Suites — Portals Nous, Mallorca" },
       { icon: "📅", label: "Dates", value: "August 6–9, 2026 (3 nights)" },
       { icon: "🌡️", label: "Weather", value: "August in Mallorca · 28–32°C, guaranteed sunshine" },
       { icon: "✈️", label: "Airport", value: "Palma de Mallorca (PMI) — transfer included" },
       { icon: "🏸", label: "Courts", value: "Professional padel courts · 3 sessions included" },
     ],
-    hotelBtn: "View Hotel",
+    button: "View Hotel",
   },
 
-  // Participants (formerly Players)
+  // Players
   players: {
-    label: "Participants",
-    title: "Who's",
-    titleHighlight: "Coming?",
-    subtitle: "Spots are limited. Participants will be announced as registrations are confirmed.",
-    cta: "Secure your spot",
-    soon: "Participants announced soon",
-    soonSub: "Register now to secure your place at MPC 2026",
+    label: "Competitors",
+    title: "Featured",
+    titleHighlight: "Players",
+    subtitle: "Participants will be announced as registrations are confirmed. Secure your spot now!",
+    comingSoonTitle: "Participants Announced Soon",
+    comingSoonText: "Player lineup will be revealed as registrations are confirmed. Be among the first to join the Mallorca Padel Camp 2026.",
+    ctaText: "Register Now",
+    bottomNote: "Limited spots available. Register early to secure your place at MPC 2026.",
   },
 
   // Results
@@ -98,42 +99,66 @@ const en = {
     label: "Competition",
     title: "Matches &",
     titleHighlight: "Results",
-    subtitle: "Tournament results will be published here during the camp.",
-    comingSoon: "Results Coming August 2026",
-    comingSoonSub: "Full bracket and live scoring will be available during the Corcuera Cup on August 8, 2026.",
+    subtitle: "Follow the tournament bracket live. Results updated after each match.",
+    comingSoonTitle: "Results Coming Soon",
+    comingSoonText: "Tournament results will be published here after the Corcuera Cup. Stay tuned!",
+    dateNote: "August 6–9, 2026 · Tomir Portals Suites, Mallorca",
+    ctaText: "Register to Compete",
   },
 
-  // What's Included (formerly Prizes)
+  // Prizes (now "What's Included")
   prizes: {
-    label: "What's Included",
-    title: "Everything",
+    label: "The Experience",
+    title: "What's",
     titleHighlight: "Included",
-    total: "All-inclusive",
     items: [
-      { icon: "🏨", title: "Tomir Portals Suites", sub: "3 nights accommodation", desc: "Stay at one of Mallorca's finest boutique hotels in exclusive Portals Nous." },
-      { icon: "🏸", title: "Padel Coaching", sub: "3 professional sessions", desc: "Expert coaching on professional courts. Morning and evening sessions included." },
-      { icon: "⛵", title: "Sunset Boat Trip", sub: "Day 2 · 3pm–7pm", desc: "Cruise the crystal waters of Mallorca as the sun sets over the Mediterranean." },
-      { icon: "🏆", title: "Corcuera Cup", sub: "Official tournament", desc: "Compete in the official Corcuera Cup — the highlight of the 4-day camp." },
-      { icon: "🚐", title: "Airport Transfers", sub: "Arrival & departure", desc: "Hassle-free transfers between Palma Airport (PMI) and the hotel." },
-      { icon: "🎁", title: "Welcome Pack", sub: "On arrival", desc: "Everything you need to kick off the camp in style." },
+      {
+        icon: "🏸",
+        title: "Professional Coaching",
+        description: "3 padel coaching sessions with expert coaches. Morning and evening sessions to improve your game.",
+      },
+      {
+        icon: "🏆",
+        title: "Corcuera Cup",
+        description: "Official tournament with all camp participants. Compete, have fun and take home the trophy.",
+      },
+      {
+        icon: "⛵",
+        title: "Sunset Boat Trip",
+        description: "Unforgettable boat trip through the crystal-clear waters of Mallorca. The perfect way to unwind.",
+      },
+      {
+        icon: "🏨",
+        title: "Tomir Portals Suites",
+        description: "3 nights at one of Mallorca's most exclusive hotels. Portals Nous, minutes from the sea.",
+      },
+      {
+        icon: "✈️",
+        title: "Airport Transfers",
+        description: "Round-trip transfer from Palma de Mallorca airport (PMI) to the hotel. No worries about logistics.",
+      },
+      {
+        icon: "🎒",
+        title: "Welcome Pack",
+        description: "Official MPC welcome pack with exclusive merchandise and everything you need for the camp.",
+      },
     ],
-    notIncludedTitle: "Not Included",
-    notIncluded: ["Flights", "Travel insurance", "Visa fees (if applicable)", "Food & drinks outside itinerary", "Personal expenses"],
+    footerNote: "All included in a single package. Limited spots available.",
   },
 
-  // Download PDF
+  // DownloadPDF
   download: {
     label: "Official Document",
     title: "Camp",
     titleHighlight: "Breakdown",
-    subtitle: "Download the official Mallorca Padel Camp 2026 breakdown with the full itinerary, what's included, hotel info and everything you need to know.",
-    fileTitle: "Breakdown_MPC_2026.pdf",
-    fileSub: "Official Camp Document",
+    description: "Download the official document with the complete itinerary, what's included, Tomir Portals Suites hotel info and everything you need to know for the camp.",
+    fileName: "Breakdown_MPC_2026.pdf",
+    fileSubtitle: "Official Tournament Document",
     whatsInside: "What's Inside",
     contents: [
-      "Full day-by-day itinerary (Aug 6–9)",
-      "What's included and not included",
-      "Hotel Tomir Portals Suites info",
+      "Complete day-by-day itinerary (August 6–9)",
+      "What's included and what's not",
+      "Tomir Portals Suites hotel info",
       "Padel sessions and schedules",
       "Corcuera Cup — format and rules",
       "Sunset boat trip — details",
@@ -141,56 +166,62 @@ const en = {
       "Arrival guide to Mallorca (PMI)",
     ],
     downloadTitle: "Download Now",
-    downloadSub: "Free PDF — No registration required",
-    downloadBtn: "Download PDF",
+    downloadSubtitle: "Free PDF — No registration required",
+    downloadButton: "Download PDF",
   },
 
   // Registration
   registration: {
     label: "Join Us",
-    title: "Register for",
+    title: "Sign up for",
     titleHighlight: "MPC 2026",
-    subtitle: "Secure your spot at Mallorca Padel Camp. August 6–9, 2026 · Tomir Portals Suites. Limited places.",
-    fields: {
-      name: "Full Name",
-      namePlaceholder: "Your full name",
-      email: "Email",
+    subtitle: "Secure your spot at the Mallorca Padel Camp. August 6–9, 2026 · Tomir Portals Suites. Limited spots.",
+    form: {
+      fullName: "Full Name *",
+      fullNamePlaceholder: "Your full name",
+      email: "Email *",
       emailPlaceholder: "your@email.com",
-      partner: "Partner Name",
-      partnerPlaceholder: "Your partner's name",
-      category: "Category",
+      partnerName: "Partner Name",
+      partnerNamePlaceholder: "Your partner's name",
+      category: "Category *",
       categoryPlaceholder: "Select category",
-      categoryOptions: ["Men's Doubles", "Women's Doubles", "Mixed Doubles"],
+      categoryMens: "Men's Doubles",
+      categoryWomens: "Women's Doubles",
+      categoryMixed: "Mixed Doubles",
       country: "Country",
       countryPlaceholder: "Your country",
       phone: "Phone",
       phonePlaceholder: "+34 XXX XXX XXX",
       message: "Message",
       messagePlaceholder: "Anything else we should know?",
+      submit: "Submit Registration",
+      legal: "By registering, you agree to the tournament rules and regulations.",
     },
-    submit: "Submit Registration",
-    legal: "By registering, you agree to the camp rules and regulations.",
-    successTitle: "Registration Received!",
-    successMsg: "Thank you! We'll be in touch with confirmation details soon.",
+    success: {
+      title: "Registration Received!",
+      message: "Thank you! We'll be in touch with confirmation details soon.",
+    },
   },
 
   // Sponsors
   sponsors: {
-    label: "Partners",
+    label: "Partnerships",
     title: "Become a",
     titleHighlight: "Partner",
-    subtitle: "Interested in partnering with Mallorca Padel Camp 2026? Get in touch.",
-    cta: "Contact us",
+    description: "Interested in partnering with MPC 2026? We're looking for brands that share our passion for padel and the Mediterranean lifestyle.",
+    ctaText: "Get in Touch",
   },
 
   // Footer
   footer: {
-    tagline: "4 days of padel at Tomir Portals Suites, Mallorca. August 6–9, 2026.",
-    col1: "Camp",
-    col2: "Resources",
-    col3: "Contact",
-    links1: ["About", "Participants", "Results", "Included", "Schedule"],
-    links2: ["Download Breakdown PDF", "Register", "Venue & Travel"],
+    description: "Padel, sun and Mediterranean. 4 days at Tomir Portals Suites, Mallorca. August 6–9, 2026.",
+    tournamentTitle: "Tournament",
+    tournamentLinks: ["About", "Players", "Results", "Included", "Schedule"],
+    resourcesTitle: "Resources",
+    resourcesDownload: "Download Breakdown PDF",
+    resourcesRegister: "Register",
+    resourcesVenue: "Venue & Travel",
+    contactTitle: "Contact",
     copyright: "© 2026 Mallorca Padel Camp. All rights reserved.",
     builtBy: "Built by",
   },
