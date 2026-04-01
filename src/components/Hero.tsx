@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-hero-gradient noise-overlay court-lines">
+    <section className="relative min-h-screen flex items-center overflow-hidden noise-overlay" style={{ backgroundColor: "#0f2233", backgroundImage: "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(135deg, #1a3a52 0%, #0f2233 50%, #1a3a52 100%)", backgroundSize: "60px 60px, 60px 60px, 100% 100%" }}>
       {/* Background glows */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-padel-orange/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-padel-orange/5 rounded-full blur-3xl" />
