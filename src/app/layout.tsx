@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const headingFont = Playfair_Display({
   subsets: ["latin"],
@@ -67,7 +68,9 @@ export default function RootLayout({
           gtag('config', 'G-XXXXXXXXXX');
         `}} /> */}
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

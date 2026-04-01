@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedSection from "./AnimatedSection";
+import { useLanguage } from "@/context/LanguageContext";
 
 const sponsors = [
   { name: "Bullpadel", tier: "Title Sponsor" },
@@ -12,16 +13,18 @@ const sponsors = [
 ];
 
 export default function Sponsors() {
+  const { t } = useLanguage();
+
   return (
     <section className="section-padding bg-light-gray relative">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <div className="text-center mb-14">
             <span className="text-padel-orange font-bold text-sm uppercase tracking-[0.2em] mb-3 block">
-              Partners
+              {t.sponsors.label}
             </span>
             <h2 className="section-title">
-              Our <span className="gradient-text">Sponsors</span>
+              {t.sponsors.title} <span className="gradient-text">{t.sponsors.titleHighlight}</span>
             </h2>
           </div>
         </AnimatedSection>
@@ -42,9 +45,9 @@ export default function Sponsors() {
 
         <AnimatedSection delay={0.3}>
           <p className="text-center text-body-gray text-sm mt-10">
-            Interested in sponsoring MPC 2026?{" "}
+            {t.sponsors.bottomNote}{" "}
             <a href="#register" className="text-padel-orange font-bold hover:underline">
-              Get in touch
+              {t.sponsors.bottomNoteLink}
             </a>
           </p>
         </AnimatedSection>
