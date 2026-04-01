@@ -4,12 +4,14 @@ import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 const pdfContents = [
-  "Complete tournament rules & regulations",
-  "Full prize pool breakdown by category",
-  "Detailed schedule with court assignments",
-  "Player registration requirements",
-  "Venue information & travel guide",
-  "Sponsor packages & partnership details",
+  "Itinerario completo día a día (6–9 agosto)",
+  "Qué está incluido y qué no",
+  "Info del hotel Tomir Portals Suites",
+  "Sesiones de pádel y horarios",
+  "Corcuera Cup — formato y reglas",
+  "Boat trip sunset — detalles",
+  "Transfers aeropuerto incluidos",
+  "Guía de llegada a Mallorca (PMI)",
 ];
 
 export default function DownloadPDF() {
@@ -31,14 +33,13 @@ export default function DownloadPDF() {
           <AnimatedSection>
             <div className="text-center mb-12">
               <span className="text-padel-orange font-bold text-sm uppercase tracking-[0.2em] mb-3 block">
-                Official Document
+                Documento oficial
               </span>
               <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">
-                Tournament <span className="gradient-text">Breakdown</span>
+                Camp <span className="gradient-text">Breakdown</span>
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                Download the complete MPC 2026 breakdown document with all tournament
-                details, rules, prize pools, and registration info.
+                Descarga el documento oficial con el itinerario completo, qué está incluido, info del hotel Tomir Portals Suites y todo lo que necesitas saber para el camp.
               </p>
             </div>
           </AnimatedSection>

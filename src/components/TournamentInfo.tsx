@@ -4,36 +4,33 @@ import AnimatedSection from "./AnimatedSection";
 
 const categories = [
   {
-    title: "Men's Doubles",
+    title: "Padel Coaching",
+    icon: "🏸",
+    teams: "3 Sessions",
+    format: "Morning & Evening",
+    description: "Sesiones de coaching profesional en pista. Mejora tu técnica con entrenadores expertos en el mejor entorno del Mediterráneo.",
+  },
+  {
+    title: "Corcuera Cup",
     icon: "🏆",
-    teams: "32 Teams",
-    format: "Round Robin → Single Elimination",
-    description: "Elite competition with players from across Europe and Latin America.",
+    teams: "Torneo incluido",
+    format: "Día 3 · 5pm–9pm",
+    description: "Competición oficial Corcuera Cup con todos los participantes del camp. El momento más esperado del fin de semana.",
   },
   {
-    title: "Women's Doubles",
-    icon: "🥇",
-    teams: "16 Teams",
-    format: "Round Robin → Single Elimination",
-    description: "Top-tier women's padel showcasing incredible talent and strategy.",
-  },
-  {
-    title: "Mixed Doubles",
-    icon: "🤝",
-    teams: "16 Teams",
-    format: "Group Stage → Knockout",
-    description: "Dynamic mixed partnerships bringing a unique blend of power and finesse.",
+    title: "Boat Trip",
+    icon: "⛵",
+    teams: "Incluido",
+    format: "Día 2 · 3pm–7pm",
+    description: "Sunset boat trip por las aguas cristalinas de Mallorca. Pádel, sol y Mediterráneo — la combinación perfecta.",
   },
 ];
 
 const schedule = [
-  { day: "Mon 15", event: "Registration & Welcome Party", icon: "🎉" },
-  { day: "Tue 16", event: "Group Stage — Day 1", icon: "🎾" },
-  { day: "Wed 17", event: "Group Stage — Day 2", icon: "🎾" },
-  { day: "Thu 18", event: "Round of 16", icon: "⚡" },
-  { day: "Fri 19", event: "Quarter-Finals", icon: "🔥" },
-  { day: "Sat 20", event: "Semi-Finals", icon: "💪" },
-  { day: "Sun 21", event: "Finals & Awards Ceremony", icon: "🏆" },
+  { day: "Mié 6 Ago", event: "Llegada · Transfer al hotel · 1ª sesión pádel 5pm–7pm", icon: "✈️" },
+  { day: "Jue 7 Ago", event: "Desayuno · Sesión mañana 10am–12pm · Boat trip sunset 3pm–7pm", icon: "⛵" },
+  { day: "Vie 8 Ago", event: "Desayuno · Sesión mañana 11am–1pm · Corcuera Cup 5pm–9pm", icon: "🏆" },
+  { day: "Sáb 9 Ago", event: "Desayuno · Sesión final 11am–1pm · Tour Palma · Transfer aeropuerto 6pm", icon: "🌅" },
 ];
 
 export default function TournamentInfo() {
@@ -51,12 +48,11 @@ export default function TournamentInfo() {
                 The Tournament
               </span>
               <h2 className="section-title">
-                What is <span className="gradient-text">MPC?</span>
+                ¿Qué es el <span className="gradient-text">MPC?</span>
               </h2>
             </div>
             <p className="section-subtitle md:text-right">
-              The Mallorca Padel Cup brings together the best padel players in an
-              unforgettable week of competition, culture, and Mediterranean spirit.
+              El Mallorca Padel Camp es una experiencia de 4 días que combina pádel de alto nivel, alojamiento en Tomir Portals Suites y lo mejor del Mediterráneo. Coaching, competición y boat trip incluidos.
             </p>
           </div>
         </AnimatedSection>
@@ -108,7 +104,7 @@ export default function TournamentInfo() {
                     <div className="bg-light-gray rounded-xl p-5 inline-block hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                       <span className="text-2xl mr-3">{item.icon}</span>
                       <span className="font-bold text-padel-orange text-sm uppercase tracking-wider">
-                        {item.day} Sept
+                        {item.day}
                       </span>
                       <p className="font-heading text-lg font-bold text-deep-blue mt-1">
                         {item.event}

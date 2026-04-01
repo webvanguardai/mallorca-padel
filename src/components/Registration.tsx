@@ -35,11 +35,10 @@ export default function Registration() {
               Join Us
             </span>
             <h2 className="section-title">
-              Register for <span className="gradient-text">MPC 2026</span>
+              Apúntate al <span className="gradient-text">MPC 2026</span>
             </h2>
             <p className="section-subtitle mx-auto mt-4">
-              Secure your spot in the Mallorca Padel Cup. Early bird registration
-              open until June 30, 2026.
+              Asegura tu plaza en el Mallorca Padel Camp. 6–9 agosto 2026 · Tomir Portals Suites. Plazas limitadas.
             </p>
           </div>
         </AnimatedSection>

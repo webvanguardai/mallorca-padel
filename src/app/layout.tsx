@@ -17,32 +17,32 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mallorca Padel Cup 2026 | MPC — International Padel Tournament",
+  title: "Mallorca Padel Camp 2026 | MPC — Agosto, Tomir Portals Suites",
   description:
-    "Join the Mallorca Padel Cup 2026 — the premier international padel tournament in Mallorca, Spain. Men's, Women's & Mixed Doubles. €25,000 prize pool. Register now!",
+    "Mallorca Padel Camp 2026 — 4 días de pádel, sol y Mediterráneo. 6–9 agosto en Tomir Portals Suites. Coaching, Corcuera Cup, boat trip y transfers incluidos. ¡Plazas limitadas!",
   keywords: [
     "padel",
-    "tournament",
-    "mallorca",
-    "padel cup",
+    "mallorca padel camp",
     "MPC 2026",
-    "padel spain",
-    "international padel",
+    "padel holidays mallorca",
+    "padel camp spain",
+    "tomir portals suites",
+    "corcuera cup",
   ],
   openGraph: {
-    title: "Mallorca Padel Cup 2026",
+    title: "Mallorca Padel Camp 2026",
     description:
-      "The premier international padel tournament in Mallorca, Spain. €25,000 prize pool.",
+      "4 días de pádel, sol y Mediterráneo. 6–9 agosto en Tomir Portals Suites, Mallorca.",
     type: "website",
-    locale: "en_US",
+    locale: "es_ES",
     url: "https://mallorca-padel.vercel.app",
-    siteName: "Mallorca Padel Cup",
+    siteName: "Mallorca Padel Camp",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mallorca Padel Cup 2026",
+    title: "Mallorca Padel Camp 2026",
     description:
-      "The premier international padel tournament in Mallorca, Spain.",
+      "4 días de pádel en Mallorca · Tomir Portals Suites · 6–9 agosto 2026.",
   },
   robots: {
     index: true,

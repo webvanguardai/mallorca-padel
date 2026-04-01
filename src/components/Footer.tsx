@@ -16,13 +16,13 @@ export default function Footer() {
               <div>
                 <span className="text-white font-heading font-bold text-lg block">MPC 2026</span>
                 <span className="text-padel-orange text-xs tracking-widest uppercase">
-                  Mallorca Padel Cup
+                  Mallorca Padel Camp
                 </span>
               </div>
             </div>
             <p className="text-sm leading-relaxed">
-              The premier international padel tournament in Mallorca, Spain.
-              September 15–21, 2026.
+              Padel, sol y Mediterráneo. 4 días en Tomir Portals Suites, Mallorca.
+              6–9 agosto 2026.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs">
-            © 2026 Mallorca Padel Cup. All rights reserved.
+            © 2026 Mallorca Padel Camp. All rights reserved.
           </p>
           <p className="text-xs">
             Built by{" "}

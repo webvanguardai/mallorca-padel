@@ -51,7 +51,7 @@ export default function Navbar() {
             </div>
             <div>
               <span className="text-white font-heading font-bold text-base tracking-wide">MPC</span>
-              <span className="text-padel-orange text-[10px] block -mt-0.5 tracking-widest uppercase">2026</span>
+              <span className="text-padel-orange text-[10px] block -mt-0.5 tracking-widest uppercase">Ago 2026</span>
             </div>
           </a>
 

@@ -25,7 +25,7 @@ export default function Hero() {
           className="mb-5"
         >
           <span className="inline-flex items-center gap-2 bg-padel-orange/20 text-padel-orange font-bold text-xs sm:text-sm uppercase tracking-[0.15em] px-4 py-2 border border-padel-orange/30">
-            🏆 September 15–21, 2026 · Mallorca
+            🏸 August 6–9, 2026 · Mallorca
           </span>
         </motion.div>
 
@@ -39,7 +39,7 @@ export default function Hero() {
         >
           MALLORCA<br />
           <span className="gradient-text">PADEL</span><br />
-          CUP<span className="text-padel-orange">.</span>
+          CAMP<span className="text-padel-orange">.</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -49,8 +49,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-white/70 text-base sm:text-lg max-w-lg mb-8 leading-relaxed"
         >
-          El torneo de pádel internacional más esperado del Mediterráneo.
-          7 días, 64 equipos, €25.000 en premios.
+          4 días de pádel, sol y Mediterráneo. Sesiones de coaching, boat trip al atardecer, Corcuera Cup y alojamiento en Tomir Portals Suites.
         </motion.p>
 
         {/* CTAs */}
@@ -89,10 +88,10 @@ export default function Hero() {
           className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl"
         >
           {[
-            { number: "64", label: "Equipos", icon: "👥" },
-            { number: "€25K", label: "Premios", icon: "💰" },
-            { number: "7", label: "Días", icon: "📅" },
-            { number: "3", label: "Categorías", icon: "🏅" },
+            { number: "4", label: "Días", icon: "📅" },
+            { number: "3", label: "Sesiones", icon: "🏸" },
+            { number: "1", label: "Boat Trip", icon: "⛵" },
+            { number: "5★", label: "Hotel", icon: "🏨" },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
