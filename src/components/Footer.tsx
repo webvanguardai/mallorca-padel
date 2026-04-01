@@ -118,12 +118,12 @@ export default function Footer() {
           <p className="text-xs">
             Built by{" "}
             <a
-              href="https://webvanguard.ai"
+              href="https://truelovecreative.es"
               target="_blank"
               rel="noopener noreferrer"
               className="text-padel-orange hover:underline"
             >
-              Web Vanguard AI
+              True Love Creative
             </a>
           </p>
         </div>
