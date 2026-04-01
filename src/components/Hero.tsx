@@ -35,7 +35,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-heading font-black text-white leading-none mb-5"
-          style={{ fontSize: "clamp(3rem, 12vw, 9rem)" }}
+          style={{ fontSize: "clamp(2.2rem, 10vw, 9rem)" }}
         >
           MALLORCA<br />
           <span className="gradient-text">PADEL</span><br />

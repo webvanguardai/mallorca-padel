@@ -82,7 +82,7 @@ export default function Navbar() {
           {/* Hamburger Mobile */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 flex-shrink-0"
+            className={`lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 flex-shrink-0 transition-opacity duration-200 ${mobileOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
             aria-label="Toggle menu"
           >
             <motion.span
@@ -112,7 +112,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-30 bg-[#0a1922]/98 backdrop-blur-xl flex flex-col"
+            className="fixed inset-0 z-50 bg-[#0a1922]/98 backdrop-blur-xl flex flex-col"
           >
             {/* Línea naranja top en el overlay también */}
             <div className="h-[2px] bg-padel-orange flex-shrink-0" />
