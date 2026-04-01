@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
+  const { lang, setLang, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { t, lang, toggleLang } = useLanguage();
 
   const navLinks = [
     { label: t.nav.tournament, href: "#about" },
@@ -26,7 +26,29 @@ export default function Navbar() {
 
   useEffect(() => {
     if (scrolled && mobileOpen) setMobileOpen(false);
-  }, [scrolled]);
+  }, [scrolled, mobileOpen]);
+
+  const LanguageToggle = () => (
+    <div className="bg-white/10 rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1">
+      <button
+        onClick={() => setLang("en")}
+        className={`px-1.5 py-0.5 rounded-full transition-colors duration-200 ${
+          lang === "en" ? "text-padel-orange" : "text-white/50 hover:text-white/70"
+        }`}
+      >
+        EN
+      </button>
+      <span className="text-white/30">|</span>
+      <button
+        onClick={() => setLang("es")}
+        className={`px-1.5 py-0.5 rounded-full transition-colors duration-200 ${
+          lang === "es" ? "text-padel-orange" : "text-white/50 hover:text-white/70"
+        }`}
+      >
+        ES
+      </button>
+    </div>
+  );
 
   return (
     <>
@@ -37,40 +59,36 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-[2px] left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled ? "bg-[#0d1f2d]/95 backdrop-blur-md shadow-2xl" : "bg-transparent"
+          scrolled
+            ? "bg-[#0d1f2d]/95 backdrop-blur-md shadow-2xl"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-          {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group flex-shrink-0">
             <div className="w-9 h-9 bg-padel-orange flex items-center justify-center font-heading font-black text-white text-lg group-hover:rotate-12 transition-transform duration-300">
               M
             </div>
             <div>
               <span className="text-white font-heading font-bold text-base tracking-wide">MPC</span>
-              <span className="text-padel-orange text-[10px] block -mt-0.5 tracking-widest uppercase">Aug 2026</span>
+              <span className="text-padel-orange text-[10px] block -mt-0.5 tracking-widest uppercase">Ago 2026</span>
             </div>
           </a>
 
-          {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-white/70 hover:text-padel-orange transition-colors duration-200 text-xs font-medium tracking-widest uppercase">
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-white/70 hover:text-padel-orange transition-colors duration-200 text-xs font-medium tracking-widest uppercase"
+              >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Desktop right: lang toggle + CTA */}
-          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-            <button
-              onClick={toggleLang}
-              className="bg-white/10 rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1 hover:bg-white/20 transition-colors duration-200"
-            >
-              <span className={lang === "en" ? "text-padel-orange" : "text-white/50"}>EN</span>
-              <span className="text-white/30">|</span>
-              <span className={lang === "es" ? "text-padel-orange" : "text-white/50"}>ES</span>
-            </button>
+          <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+            <LanguageToggle />
             <a
               href="#register"
               className="bg-padel-orange text-white font-bold px-5 py-2 text-xs uppercase tracking-wider hover:bg-orange-600 transition-all duration-300"
@@ -80,20 +98,30 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 flex-shrink-0 transition-opacity duration-200 ${mobileOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
             aria-label="Toggle menu"
           >
-            <span className="block w-6 h-0.5 bg-white origin-center" />
-            <span className="block w-6 h-0.5 bg-white" />
-            <span className="block w-6 h-0.5 bg-white origin-center" />
+            <motion.span
+              animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-white origin-center"
+            />
+            <motion.span
+              animate={mobileOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-white"
+            />
+            <motion.span
+              animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-white origin-center"
+            />
           </button>
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -104,9 +132,13 @@ export default function Navbar() {
             className="fixed inset-0 z-50 bg-[#0a1922]/98 backdrop-blur-xl flex flex-col"
           >
             <div className="h-[2px] bg-padel-orange flex-shrink-0" />
+
             <div className="px-5 h-16 flex items-center justify-between flex-shrink-0">
               <span className="text-white font-heading font-bold text-base">MPC 2026</span>
-              <button onClick={() => setMobileOpen(false)} className="text-white/60 hover:text-white w-10 h-10 flex items-center justify-center">
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="text-white/60 hover:text-white w-10 h-10 flex items-center justify-center"
+              >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -128,25 +160,21 @@ export default function Navbar() {
                 </motion.a>
               ))}
 
-              {/* Lang toggle mobile */}
-              <motion.button
-                onClick={toggleLang}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.38 }}
-                className="mt-4 bg-white/10 rounded-full px-5 py-2 text-sm font-bold flex items-center gap-2"
+                transition={{ delay: 0.35 }}
+                className="mt-4"
               >
-                <span className={lang === "en" ? "text-padel-orange" : "text-white/50"}>EN</span>
-                <span className="text-white/30">|</span>
-                <span className={lang === "es" ? "text-padel-orange" : "text-white/50"}>ES</span>
-              </motion.button>
+                <LanguageToggle />
+              </motion.div>
 
               <motion.a
                 href="#register"
                 onClick={() => setMobileOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.44 }}
+                transition={{ delay: 0.4 }}
                 className="mt-4 bg-padel-orange text-white font-bold px-8 py-3.5 text-sm uppercase tracking-widest hover:bg-orange-600 transition-all duration-300"
               >
                 {t.nav.register}

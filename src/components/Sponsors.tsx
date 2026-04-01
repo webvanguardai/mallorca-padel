@@ -3,53 +3,27 @@
 import AnimatedSection from "./AnimatedSection";
 import { useLanguage } from "@/context/LanguageContext";
 
-const sponsors = [
-  { name: "Bullpadel", tier: "Title Sponsor" },
-  { name: "HEAD", tier: "Official Ball" },
-  { name: "Visit Mallorca", tier: "Tourism Partner" },
-  { name: "Estrella Damm", tier: "Official Beer" },
-  { name: "Decathlon", tier: "Equipment Partner" },
-  { name: "Iberostar", tier: "Hotel Partner" },
-];
-
 export default function Sponsors() {
   const { t } = useLanguage();
 
   return (
     <section className="section-padding bg-light-gray relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto text-center">
         <AnimatedSection>
-          <div className="text-center mb-14">
-            <span className="text-padel-orange font-bold text-sm uppercase tracking-[0.2em] mb-3 block">
-              {t.sponsors.label}
-            </span>
-            <h2 className="section-title">
-              {t.sponsors.title} <span className="gradient-text">{t.sponsors.titleHighlight}</span>
-            </h2>
-          </div>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {sponsors.map((sponsor, i) => (
-            <AnimatedSection key={sponsor.name} delay={i * 0.08}>
-              <div className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group h-full border border-transparent hover:border-padel-orange/20">
-                <div className="w-16 h-16 bg-gradient-to-br from-deep-blue/10 to-padel-orange/10 rounded-xl flex items-center justify-center font-heading font-bold text-deep-blue text-xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                  {sponsor.name.charAt(0)}
-                </div>
-                <span className="font-bold text-deep-blue text-sm">{sponsor.name}</span>
-                <span className="text-body-gray text-xs mt-1">{sponsor.tier}</span>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-
-        <AnimatedSection delay={0.3}>
-          <p className="text-center text-body-gray text-sm mt-10">
-            {t.sponsors.bottomNote}{" "}
-            <a href="#register" className="text-padel-orange font-bold hover:underline">
-              {t.sponsors.bottomNoteLink}
-            </a>
-          </p>
+          <span className="text-padel-orange font-bold text-sm uppercase tracking-[0.2em] mb-3 block">{t.sponsors.label}</span>
+          <h2 className="section-title mb-6">
+            {t.sponsors.title} <span className="gradient-text">{t.sponsors.titleHighlight}</span>
+          </h2>
+          <p className="section-subtitle mx-auto mb-10">{t.sponsors.subtitle}</p>
+          <a
+            href="#register"
+            className="inline-flex items-center gap-2 bg-deep-blue text-white font-bold px-8 py-4 rounded-xl hover:bg-deep-blue/80 transition-all duration-300 text-sm uppercase tracking-wider"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            {t.sponsors.cta}
+          </a>
         </AnimatedSection>
       </div>
     </section>
