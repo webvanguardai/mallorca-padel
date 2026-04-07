@@ -62,7 +62,7 @@ export default function TournamentInfo() {
         </AnimatedSection>
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-padel-orange/50 via-deep-blue/30 to-padel-orange/50" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-padel-orange via-deep-blue/60 to-padel-orange" />
 
           <div className="space-y-6 md:space-y-0 md:grid md:grid-cols-1 md:gap-0">
             {t.tournament.schedule.map((item, i) => (
@@ -90,6 +90,25 @@ export default function TournamentInfo() {
             ))}
           </div>
         </div>
+
+        {/* Schedule disclaimer */}
+        <AnimatedSection delay={0.2}>
+          <p className="text-center text-body-gray/70 text-sm italic mt-8">
+            {t.tournament.scheduleDisclaimer}
+          </p>
+        </AnimatedSection>
+
+        {/* LTP Partnership */}
+        <AnimatedSection delay={0.3}>
+          <div className="mt-16 flex items-center justify-center gap-4">
+            <div className="h-px flex-1 max-w-[80px] bg-deep-blue/10" />
+            <a href="https://lovethepadel.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <span className="text-body-gray text-[11px] uppercase tracking-[0.2em]">In partnership with</span>
+              <img src="/ltp-logo.png" alt="Love The Padel" className="h-12" />
+            </a>
+            <div className="h-px flex-1 max-w-[80px] bg-deep-blue/10" />
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

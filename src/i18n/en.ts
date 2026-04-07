@@ -7,9 +7,9 @@ const en = {
     ctaDownload: "Download Breakdown",
     stats: [
       { number: "4", label: "Days", icon: "📅" },
-      { number: "3", label: "Sessions", icon: "🏸" },
+      { number: "4", label: "Sessions", icon: "🏸" },
       { number: "1", label: "Boat Trip", icon: "⛵" },
-      { number: "5★", label: "Hotel", icon: "🏨" },
+      { number: "4★", label: "Hotel", icon: "🏨" },
     ],
     scroll: "Scroll",
   },
@@ -33,12 +33,12 @@ const en = {
     label: "The Tournament",
     title: "What is the",
     titleHighlight: "MPC?",
-    description: "The Mallorca Padel Camp is a 4-day experience combining top-level padel, accommodation at Tomir Portals Suites and the best of the Mediterranean. Coaching, competition and boat trip included.",
+    description: "The Mallorca Padel Camp LTP Edition is a 4-day experience combining top-level padel, accommodation at Tomir Portals Suites and the best of the Mediterranean. 4 coaching sessions, tournament and boat trip included.",
     categories: [
       {
         title: "Padel Coaching",
         icon: "🏸",
-        teams: "3 Sessions",
+        teams: "4 Sessions",
         format: "Morning & Evening",
         description: "Professional on-court coaching sessions. Improve your technique with expert coaches in the best Mediterranean setting.",
       },
@@ -64,6 +64,7 @@ const en = {
       { day: "Sat 9 Aug", event: "Breakfast · Final session 11am–1pm · Palma tour · Airport transfer 6pm", icon: "🌅" },
     ],
     scheduleTitle: "Tournament Schedule",
+    scheduleDisclaimer: "Schedules might differ. Final confirmation will be sent closer to the date.",
   },
 
   // Location
@@ -77,7 +78,7 @@ const en = {
       { icon: "📅", label: "Dates", value: "August 6–9, 2026 (3 nights)" },
       { icon: "🌡️", label: "Weather", value: "August in Mallorca · 28–32°C, guaranteed sunshine" },
       { icon: "✈️", label: "Airport", value: "Palma de Mallorca (PMI) — transfer included" },
-      { icon: "🏸", label: "Courts", value: "Professional padel courts · 3 sessions included" },
+      { icon: "🏸", label: "Courts", value: "Professional padel courts · 4 sessions + 1 tournament" },
     ],
     button: "View Hotel",
   },
@@ -89,7 +90,7 @@ const en = {
     titleHighlight: "Players",
     subtitle: "Participants will be announced as registrations are confirmed. Secure your spot now!",
     comingSoonTitle: "Participants Announced Soon",
-    comingSoonText: "Player lineup will be revealed as registrations are confirmed. Be among the first to join the Mallorca Padel Camp 2026.",
+    comingSoonText: "Player lineup will be revealed as registrations are confirmed. Be among the first to join the Mallorca Padel Camp 2026 LTP Edition.",
     ctaText: "Register Now",
     bottomNote: "Limited spots available. Register early to secure your place at MPC 2026.",
   },
@@ -115,7 +116,7 @@ const en = {
       {
         icon: "🏸",
         title: "Professional Coaching",
-        description: "3 padel coaching sessions with expert coaches. Morning and evening sessions to improve your game.",
+        description: "4 padel coaching sessions with expert coaches. Morning and evening sessions to improve your game.",
       },
       {
         icon: "🏆",
@@ -159,7 +160,7 @@ const en = {
       "Complete day-by-day itinerary (August 6–9)",
       "What's included and what's not",
       "Tomir Portals Suites hotel info",
-      "Padel sessions and schedules",
+      "4 padel sessions + tournament schedule",
       "Corcuera Cup — format and rules",
       "Sunset boat trip — details",
       "Airport transfers included",
@@ -175,7 +176,7 @@ const en = {
     label: "Join Us",
     title: "Sign up for",
     titleHighlight: "MPC 2026",
-    subtitle: "Secure your spot at the Mallorca Padel Camp. August 6–9, 2026 · Tomir Portals Suites. Limited spots.",
+    subtitle: "Secure your spot at the Mallorca Padel Camp LTP Edition. August 6–9, 2026 · Tomir Portals Suites. Limited spots.",
     form: {
       fullName: "Full Name *",
       fullNamePlaceholder: "Your full name",
@@ -222,7 +223,7 @@ const en = {
     resourcesRegister: "Register",
     resourcesVenue: "Venue & Travel",
     contactTitle: "Contact",
-    copyright: "© 2026 Mallorca Padel Camp. All rights reserved.",
+    copyright: "© 2026 Mallorca Padel Camp LTP Edition. All rights reserved.",
     builtBy: "Built by",
   },
 };

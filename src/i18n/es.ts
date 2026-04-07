@@ -9,9 +9,9 @@ const es: Translations = {
     ctaDownload: "Descargar Breakdown",
     stats: [
       { number: "4", label: "Días", icon: "📅" },
-      { number: "3", label: "Sesiones", icon: "🏸" },
+      { number: "4", label: "Sesiones", icon: "🏸" },
       { number: "1", label: "Boat Trip", icon: "⛵" },
-      { number: "5★", label: "Hotel", icon: "🏨" },
+      { number: "4★", label: "Hotel", icon: "🏨" },
     ],
     scroll: "Scroll",
   },
@@ -35,12 +35,12 @@ const es: Translations = {
     label: "El Torneo",
     title: "¿Qué es el",
     titleHighlight: "MPC?",
-    description: "El Mallorca Padel Camp es una experiencia de 4 días que combina pádel de alto nivel, alojamiento en Tomir Portals Suites y lo mejor del Mediterráneo. Coaching, competición y boat trip incluidos.",
+    description: "El Mallorca Padel Camp LTP Edition es una experiencia de 4 días que combina pádel de alto nivel, alojamiento en Tomir Portals Suites y lo mejor del Mediterráneo. 4 sesiones de coaching, torneo y boat trip incluidos.",
     categories: [
       {
         title: "Padel Coaching",
         icon: "🏸",
-        teams: "3 Sesiones",
+        teams: "4 Sesiones",
         format: "Mañana y Tarde",
         description: "Sesiones de coaching profesional en pista. Mejora tu técnica con entrenadores expertos en el mejor entorno del Mediterráneo.",
       },
@@ -66,6 +66,7 @@ const es: Translations = {
       { day: "Sáb 9 Ago", event: "Desayuno · Sesión final 11am–1pm · Tour Palma · Transfer aeropuerto 6pm", icon: "🌅" },
     ],
     scheduleTitle: "Programa del Camp",
+    scheduleDisclaimer: "Los horarios pueden variar. La confirmación definitiva se enviará próxima a la fecha.",
   },
 
   // Location
@@ -79,7 +80,7 @@ const es: Translations = {
       { icon: "📅", label: "Fechas", value: "6–9 agosto 2026 (3 noches)" },
       { icon: "🌡️", label: "Tiempo", value: "Agosto en Mallorca · 28–32°C, sol garantizado" },
       { icon: "✈️", label: "Aeropuerto", value: "Palma de Mallorca (PMI) — transfer incluido" },
-      { icon: "🏸", label: "Pistas", value: "Pistas profesionales de pádel · 3 sesiones incluidas" },
+      { icon: "🏸", label: "Pistas", value: "Pistas profesionales de pádel · 4 sesiones + 1 torneo" },
     ],
     button: "Ver Hotel",
   },
@@ -91,7 +92,7 @@ const es: Translations = {
     titleHighlight: "Destacados",
     subtitle: "Los participantes se anunciarán a medida que se confirmen las inscripciones. ¡Asegura tu plaza ahora!",
     comingSoonTitle: "Participantes por confirmar",
-    comingSoonText: "La lista de jugadores se revelará a medida que se confirmen las inscripciones. Sé de los primeros en unirte al Mallorca Padel Camp 2026.",
+    comingSoonText: "La lista de jugadores se revelará a medida que se confirmen las inscripciones. Sé de los primeros en unirte al Mallorca Padel Camp 2026 LTP Edition.",
     ctaText: "Inscríbete Ahora",
     bottomNote: "Plazas limitadas. Regístrate pronto para asegurar tu lugar en el MPC 2026.",
   },
@@ -117,7 +118,7 @@ const es: Translations = {
       {
         icon: "🏸",
         title: "Coaching Profesional",
-        description: "3 sesiones de coaching de pádel con entrenadores expertos. Sesiones de mañana y tarde para mejorar tu juego.",
+        description: "4 sesiones de coaching de pádel con entrenadores expertos. Sesiones de mañana y tarde para mejorar tu juego.",
       },
       {
         icon: "🏆",
@@ -161,7 +162,7 @@ const es: Translations = {
       "Itinerario completo día a día (6–9 agosto)",
       "Qué está incluido y qué no",
       "Info del hotel Tomir Portals Suites",
-      "Sesiones de pádel y horarios",
+      "4 sesiones de pádel + programa del torneo",
       "Corcuera Cup — formato y reglas",
       "Boat trip sunset — detalles",
       "Transfers aeropuerto incluidos",
@@ -177,7 +178,7 @@ const es: Translations = {
     label: "Únete",
     title: "Apúntate al",
     titleHighlight: "MPC 2026",
-    subtitle: "Asegura tu plaza en el Mallorca Padel Camp. 6–9 agosto 2026 · Tomir Portals Suites. Plazas limitadas.",
+    subtitle: "Asegura tu plaza en el Mallorca Padel Camp LTP Edition. 6–9 agosto 2026 · Tomir Portals Suites. Plazas limitadas.",
     form: {
       fullName: "Nombre Completo *",
       fullNamePlaceholder: "Tu nombre completo",
@@ -224,7 +225,7 @@ const es: Translations = {
     resourcesRegister: "Inscribirse",
     resourcesVenue: "Ubicación y Viaje",
     contactTitle: "Contacto",
-    copyright: "© 2026 Mallorca Padel Camp. Todos los derechos reservados.",
+    copyright: "© 2026 Mallorca Padel Camp LTP Edition. Todos los derechos reservados.",
     builtBy: "Hecho por",
   },
 };
