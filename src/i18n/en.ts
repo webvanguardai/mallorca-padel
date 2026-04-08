@@ -145,6 +145,22 @@ const en = {
       },
     ],
     footerNote: "All included in a single package. Limited spots available.",
+    pricing: {
+      title: "Pricing",
+      individual: {
+        label: "Individual Room",
+        price: "1,900",
+        currency: "€",
+        description: "Single occupancy room at Tomir Portals Suites",
+      },
+      shared: {
+        label: "Shared Room",
+        price: "1,750",
+        currency: "€",
+        description: "Double occupancy room at Tomir Portals Suites",
+      },
+      perPerson: "per person",
+    },
   },
 
   // DownloadPDF

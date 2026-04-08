@@ -254,6 +254,51 @@ const html = `<!DOCTYPE html>
     font-size: 9pt;
     color: rgba(255,255,255,0.4);
   }
+  .pricing-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .pricing-card {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+  }
+  .pricing-card .pc-label {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 12pt;
+    color: white;
+    margin-bottom: 4px;
+  }
+  .pricing-card .pc-desc {
+    font-size: 8pt;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 12px;
+  }
+  .pricing-card .pc-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 32pt;
+    font-weight: 900;
+    color: ${ORANGE};
+    line-height: 1;
+  }
+  .pricing-card .pc-currency {
+    font-size: 16pt;
+    font-weight: 700;
+    color: ${ORANGE};
+  }
+  .pricing-card .pc-per {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+    display: block;
+  }
 
   /* ===== PAGE 4: HOTEL & LOCATION ===== */
   .hotel {
@@ -504,6 +549,21 @@ const html = `<!DOCTYPE html>
       <span class="ic-icon">🎒</span>
       <div class="ic-title">Welcome Pack</div>
       <div class="ic-desc">Official MPC welcome pack with exclusive merchandise and everything you need for the camp.</div>
+    </div>
+  </div>
+
+  <div class="pricing-row">
+    <div class="pricing-card">
+      <div class="pc-label">Individual Room</div>
+      <div class="pc-desc">Single occupancy at Tomir Portals Suites</div>
+      <span class="pc-price">1,900</span><span class="pc-currency">€</span>
+      <span class="pc-per">per person</span>
+    </div>
+    <div class="pricing-card">
+      <div class="pc-label">Shared Room</div>
+      <div class="pc-desc">Double occupancy at Tomir Portals Suites</div>
+      <span class="pc-price">1,750</span><span class="pc-currency">€</span>
+      <span class="pc-per">per person</span>
     </div>
   </div>
 
