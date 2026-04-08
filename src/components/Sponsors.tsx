@@ -7,7 +7,7 @@ export default function Sponsors() {
   const { t } = useLanguage();
 
   return (
-    <section className="section-padding bg-light-gray relative">
+    <section id="sponsors" className="section-padding bg-light-gray relative">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <div className="text-center mb-14">

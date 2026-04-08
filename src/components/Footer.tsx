@@ -22,7 +22,7 @@ export default function Footer() {
               <div>
                 <span className="text-white font-heading font-bold text-lg block">MPC 2026</span>
                 <span className="text-padel-orange text-xs tracking-widest uppercase">
-                  Mallorca Padel Camp
+                  Mallorca Padel Camp LTP Edition
                 </span>
               </div>
             </div>
@@ -116,7 +116,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        {/* Partner badge */}
+        <div className="border-t border-white/10 pt-8 pb-6 flex justify-center">
+          <a href="https://lovethepadel.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 opacity-50 hover:opacity-80 transition-opacity duration-300">
+            <span className="text-[10px] uppercase tracking-widest text-white/40">In partnership with</span>
+            <img src="/ltp-logo.png" alt="Love The Padel" className="h-8 brightness-[2] invert-0" />
+          </a>
+        </div>
+
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs">
             {t.footer.copyright}
           </p>

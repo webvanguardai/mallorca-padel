@@ -10,7 +10,7 @@ export default function DownloadPDF() {
   return (
     <section id="download" className="relative overflow-hidden">
       {/* Top diagonal */}
-      <div className="bg-white h-20 diagonal-clip" />
+      <div className="bg-light-gray h-20 diagonal-clip" />
 
       <div
         className="section-padding -mt-1 noise-overlay relative"

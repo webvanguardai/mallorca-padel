@@ -42,8 +42,21 @@ export default function Hero() {
         >
           MALLORCA<br />
           <span className="gradient-text">PADEL</span><br />
-          CAMP<span className="text-padel-orange">.</span>
+          CAMP<span className="text-padel-orange">.</span><br />
+          <span className="text-padel-orange text-[clamp(1rem,4vw,3.5rem)] tracking-[0.15em]">LTP EDITION</span>
         </motion.h1>
+
+        {/* LTP Partnership */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mb-8"
+        >
+          <a href="https://lovethepadel.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-white rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300">
+            <img src="/ltp-logo.png" alt="Love The Padel" className="h-16 sm:h-20" />
+          </a>
+        </motion.div>
 
         {/* Subtitle */}
         <motion.p

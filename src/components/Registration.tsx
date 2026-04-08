@@ -160,6 +160,12 @@ export default function Registration() {
               <p className="text-center text-body-gray text-xs mt-4">
                 {t.registration.form.legal}
               </p>
+              <div className="flex items-center justify-center gap-3 mt-6 pt-6 border-t border-gray-200">
+                <span className="text-body-gray/50 text-[10px] uppercase tracking-[0.2em]">In partnership with</span>
+                <a href="https://lovethepadel.com" target="_blank" rel="noopener noreferrer">
+                  <img src="/ltp-logo.png" alt="Love The Padel" className="h-10 hover:scale-105 transition-transform duration-300" />
+                </a>
+              </div>
             </form>
           </AnimatedSection>
         )}

@@ -41,9 +41,17 @@ export default function Prizes() {
         </div>
 
         <AnimatedSection>
-          <p className="text-center text-body-gray text-sm">
+          <p className="text-center text-body-gray text-sm mb-10">
             {t.prizes.footerNote}
           </p>
+          <div className="flex items-center justify-center gap-4">
+            <div className="h-px flex-1 max-w-[80px] bg-deep-blue/10" />
+            <a href="https://lovethepadel.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <span className="text-body-gray text-[11px] uppercase tracking-[0.2em]">In partnership with</span>
+              <img src="/ltp-logo.png" alt="Love The Padel" className="h-12" />
+            </a>
+            <div className="h-px flex-1 max-w-[80px] bg-deep-blue/10" />
+          </div>
         </AnimatedSection>
       </div>
     </section>
