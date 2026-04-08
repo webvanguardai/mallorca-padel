@@ -79,18 +79,14 @@ const html = `<!DOCTYPE html>
     margin-bottom: 30px;
   }
   .cover h1 {
-    font-size: 56pt;
+    font-size: 48pt;
     font-weight: 900;
-    line-height: 0.90;
+    line-height: 0.92;
     margin-bottom: 12px;
     position: relative;
   }
   .cover h1 .orange { color: ${ORANGE}; }
-  .cover h1 .gradient {
-    background: linear-gradient(to right, ${ORANGE}, ${GOLD});
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  .cover h1 .gradient { color: ${ORANGE}; }
   .cover .edition {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
