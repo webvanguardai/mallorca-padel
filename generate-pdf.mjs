@@ -45,10 +45,10 @@ const html = `<!DOCTYPE html>
   .cover {
     background: linear-gradient(135deg, ${DARK2} 0%, ${DARK} 50%, ${DARK2} 100%);
     color: white;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 40mm 25mm;
+    padding: 28mm 22mm 24mm;
   }
   .cover::before {
     content: '';
@@ -79,10 +79,10 @@ const html = `<!DOCTYPE html>
     margin-bottom: 30px;
   }
   .cover h1 {
-    font-size: 72pt;
+    font-size: 56pt;
     font-weight: 900;
-    line-height: 0.88;
-    margin-bottom: 10px;
+    line-height: 0.90;
+    margin-bottom: 12px;
     position: relative;
   }
   .cover h1 .orange { color: ${ORANGE}; }
@@ -94,43 +94,42 @@ const html = `<!DOCTYPE html>
   .cover .edition {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 24pt;
+    font-size: 26pt;
     color: ${ORANGE};
     letter-spacing: 0.15em;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
   .cover .ltp-box {
     display: inline-block;
     background: white;
     border-radius: 12px;
-    padding: 12px 24px;
-    margin-bottom: 35px;
+    padding: 14px 28px;
+    margin-bottom: 0;
   }
-  .cover .ltp-box img { height: 50px; }
+  .cover .ltp-box img { height: 55px; }
   .cover .subtitle {
-    font-size: 12pt;
+    font-size: 12.5pt;
     color: rgba(255,255,255,0.65);
-    max-width: 400px;
-    margin: 0 auto 35px;
+    max-width: 420px;
+    margin: 0 auto;
     line-height: 1.7;
   }
   .cover .stats-row {
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-top: 15px;
   }
   .cover .stat-card {
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
-    padding: 16px 20px;
+    padding: 18px 22px;
     text-align: center;
-    min-width: 100px;
+    min-width: 108px;
   }
-  .cover .stat-card .icon { font-size: 20pt; margin-bottom: 4px; }
+  .cover .stat-card .icon { font-size: 22pt; margin-bottom: 4px; }
   .cover .stat-card .num {
     font-family: 'Playfair Display', serif;
-    font-size: 26pt;
+    font-size: 28pt;
     font-weight: 900;
     display: block;
     line-height: 1;
@@ -142,6 +141,10 @@ const html = `<!DOCTYPE html>
     color: rgba(255,255,255,0.4);
     margin-top: 4px;
     display: block;
+  }
+  .cover-top, .cover-middle, .cover-bottom {
+    position: relative;
+    z-index: 1;
   }
 
   /* ===== PAGE 2: ITINERARY ===== */
@@ -387,8 +390,10 @@ const html = `<!DOCTYPE html>
 
 <!-- PAGE 1: COVER -->
 <div class="page cover">
-  <div style="position:relative;z-index:1">
+  <div class="cover-top">
     <div class="cover-badge">🏸 August 6–9, 2026 · Mallorca</div>
+  </div>
+  <div class="cover-middle">
     <h1>
       MALLORCA<br>
       <span class="gradient">PADEL</span><br>
@@ -398,8 +403,10 @@ const html = `<!DOCTYPE html>
     <div class="ltp-box">
       <img src="LTP_LOGO_PLACEHOLDER" alt="Love The Padel">
     </div>
+  </div>
+  <div class="cover-bottom">
     <p class="subtitle">4 days of padel, sun and Mediterranean. Coaching sessions, sunset boat trip, Corcuera Cup and accommodation at Tomir Portals Suites.</p>
-    <div class="stats-row">
+    <div class="stats-row" style="margin-top:24px">
       <div class="stat-card">
         <div class="icon">📅</div>
         <span class="num">4</span>
