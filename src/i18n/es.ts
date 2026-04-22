@@ -3,7 +3,7 @@ import type { Translations } from "./en";
 const es: Translations = {
   // Hero
   hero: {
-    badge: "🏸 6–9 agosto 2026 · Mallorca",
+    badge: "🏸 20–23 agosto 2026 · Mallorca",
     subtitle: "4 días de pádel, sol y Mediterráneo. Sesiones de coaching, boat trip al atardecer, Corcuera Cup y alojamiento en Tomir Portals Suites.",
     ctaRegister: "Inscripción",
     ctaDownload: "Descargar Breakdown",
@@ -60,10 +60,10 @@ const es: Translations = {
       },
     ],
     schedule: [
-      { day: "Mié 6 Ago", event: "Llegada · Transfer al hotel · 1ª sesión pádel 5pm–7pm", icon: "✈️" },
-      { day: "Jue 7 Ago", event: "Desayuno · Sesión mañana 10am–12pm · Boat trip sunset 3pm–7pm", icon: "⛵" },
-      { day: "Vie 8 Ago", event: "Desayuno · Sesión mañana 11am–1pm · Corcuera Cup 5pm–9pm", icon: "🏆" },
-      { day: "Sáb 9 Ago", event: "Desayuno · Sesión final 11am–1pm · Tour Palma · Transfer aeropuerto 6pm", icon: "🌅" },
+      { day: "Jue 20 Ago", event: "Llegada · Transfer al hotel · 1ª sesión pádel 5pm–7pm", icon: "✈️" },
+      { day: "Vie 21 Ago", event: "Desayuno · Sesión mañana 10am–12pm · Boat trip sunset 3pm–7pm", icon: "⛵" },
+      { day: "Sáb 22 Ago", event: "Desayuno · Sesión mañana 11am–1pm · Corcuera Cup 5pm–9pm", icon: "🏆" },
+      { day: "Dom 23 Ago", event: "Desayuno · Sesión final 11am–1pm · Tour Palma · Transfer aeropuerto 6pm", icon: "🌅" },
     ],
     scheduleTitle: "Programa del Camp",
     scheduleDisclaimer: "Los horarios pueden variar. La confirmación definitiva se enviará próxima a la fecha.",
@@ -77,7 +77,7 @@ const es: Translations = {
     description: 'Alojamiento incluido en <strong class="text-white">Tomir Portals Suites</strong>, uno de los hoteles más exclusivos de Mallorca. Portals Nous, a minutos del mar y con acceso directo a las mejores pistas de pádel de la isla.',
     info: [
       { icon: "🏨", label: "Hotel", value: "Tomir Portals Suites — Portals Nous, Mallorca" },
-      { icon: "📅", label: "Fechas", value: "6–9 agosto 2026 (3 noches)" },
+      { icon: "📅", label: "Fechas", value: "20–23 agosto 2026 (3 noches)" },
       { icon: "🌡️", label: "Tiempo", value: "Agosto en Mallorca · 28–32°C, sol garantizado" },
       { icon: "✈️", label: "Aeropuerto", value: "Palma de Mallorca (PMI) — transfer incluido" },
       { icon: "🏸", label: "Pistas", value: "Pistas profesionales de pádel · 4 sesiones + 1 torneo" },
@@ -105,7 +105,7 @@ const es: Translations = {
     subtitle: "Sigue el cuadro del torneo en directo. Resultados actualizados tras cada partido.",
     comingSoonTitle: "Resultados Próximamente",
     comingSoonText: "Los resultados del torneo se publicarán aquí tras la Corcuera Cup. ¡Mantente atento!",
-    dateNote: "6–9 agosto 2026 · Tomir Portals Suites, Mallorca",
+    dateNote: "20–23 agosto 2026 · Tomir Portals Suites, Mallorca",
     ctaText: "Inscríbete para Competir",
   },
 
@@ -175,7 +175,7 @@ const es: Translations = {
     fileSubtitle: "Documento Oficial del Torneo",
     whatsInside: "Qué Contiene",
     contents: [
-      "Itinerario completo día a día (6–9 agosto)",
+      "Itinerario completo día a día (20–23 agosto)",
       "Qué está incluido y qué no",
       "Info del hotel Tomir Portals Suites",
       "4 sesiones de pádel + programa del torneo",
@@ -194,7 +194,7 @@ const es: Translations = {
     label: "Únete",
     title: "Apúntate al",
     titleHighlight: "MPC 2026",
-    subtitle: "Asegura tu plaza en el Mallorca Padel Camp LTP Edition. 6–9 agosto 2026 · Tomir Portals Suites. Plazas limitadas.",
+    subtitle: "Asegura tu plaza en el Mallorca Padel Camp LTP Edition. 20–23 agosto 2026 · Tomir Portals Suites. Plazas limitadas.",
     form: {
       fullName: "Nombre Completo *",
       fullNamePlaceholder: "Tu nombre completo",
@@ -233,7 +233,7 @@ const es: Translations = {
 
   // Footer
   footer: {
-    description: "Pádel, sol y Mediterráneo. 4 días en Tomir Portals Suites, Mallorca. 6–9 agosto 2026.",
+    description: "Pádel, sol y Mediterráneo. 4 días en Tomir Portals Suites, Mallorca. 20–23 agosto 2026.",
     tournamentTitle: "Torneo",
     tournamentLinks: ["Sobre", "Jugadores", "Resultados", "Incluido", "Programa"],
     resourcesTitle: "Recursos",

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Mallorca Padel Camp 2026 LTP Edition (MPC) — a single-page marketing website for a padel tournament/camp event in Mallorca (Aug 6–9, 2026). Built with Next.js 14 App Router, Tailwind CSS, and Framer Motion.
+Mallorca Padel Camp 2026 LTP Edition (MPC) — a single-page marketing website for a padel tournament/camp event in Mallorca (Aug 20–23, 2026). Built with Next.js 14 App Router, Tailwind CSS, and Framer Motion.
 
 ## Commands
 
