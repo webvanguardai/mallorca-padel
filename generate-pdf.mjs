@@ -455,7 +455,7 @@ const html = `<!DOCTYPE html>
       </div>
       <div class="stat-card">
         <div class="icon">🏸</div>
-        <span class="num">4</span>
+        <span class="num">5</span>
         <span class="lbl">Sessions</span>
       </div>
       <div class="stat-card">
@@ -490,7 +490,7 @@ const html = `<!DOCTYPE html>
     <div class="day-icon">⛵</div>
     <div class="day-info">
       <div class="day-name">Friday, August 21</div>
-      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">2nd Padel Session — 10:00am to 12:00pm</strong><br>Free time for lunch & beach<br><strong style="color:${ORANGE}">Sunset Boat Trip — 3:00pm to 7:00pm</strong></div>
+      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">2nd Padel Session — 10:00am to 12:00pm</strong><br>Free time for lunch & beach<br><strong style="color:${ORANGE}">3rd Padel Session — 4:00pm to 6:00pm</strong><br><strong style="color:${ORANGE}">Sunset Boat Trip — 7:00pm to 10:00pm</strong></div>
     </div>
   </div>
 
@@ -498,7 +498,7 @@ const html = `<!DOCTYPE html>
     <div class="day-icon">🏆</div>
     <div class="day-info">
       <div class="day-name">Saturday, August 22</div>
-      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">3rd Padel Session — 11:00am to 1:00pm</strong><br>Free time for lunch<br><strong style="color:${ORANGE}">Corcuera Cup Tournament — 5:00pm to 9:00pm</strong></div>
+      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">4th Padel Session — 11:00am to 1:00pm</strong><br>Free time for lunch<br><strong style="color:${ORANGE}">Corcuera Cup Tournament — 5:00pm to 9:00pm</strong></div>
     </div>
   </div>
 
@@ -506,7 +506,7 @@ const html = `<!DOCTYPE html>
     <div class="day-icon">🌅</div>
     <div class="day-info">
       <div class="day-name">Sunday, August 23</div>
-      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">4th Padel Session (Final) — 11:00am to 1:00pm</strong><br>Palma city tour<br>Airport transfer — 6:00pm</div>
+      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">5th Padel Session (Final) — 11:00am to 1:00pm</strong><br>Palma city tour<br>Airport transfer — 6:00pm</div>
     </div>
   </div>
 
@@ -523,7 +523,7 @@ const html = `<!DOCTYPE html>
     <div class="included-card">
       <span class="ic-icon">🏸</span>
       <div class="ic-title">Professional Coaching</div>
-      <div class="ic-desc">4 padel coaching sessions with expert coaches. Morning and evening sessions to improve your game in the best Mediterranean setting.</div>
+      <div class="ic-desc">5 padel coaching sessions with expert coaches. Morning and evening sessions to improve your game in the best Mediterranean setting.</div>
     </div>
     <div class="included-card">
       <span class="ic-icon">🏆</span>
@@ -609,7 +609,7 @@ const html = `<!DOCTYPE html>
       <div class="hi-icon">🏸</div>
       <div>
         <div class="hi-label">Padel Courts</div>
-        <div class="hi-value">Professional padel courts nearby<br>4 coaching sessions + 1 Corcuera Cup tournament</div>
+        <div class="hi-value">Professional padel courts nearby<br>5 coaching sessions + 1 Corcuera Cup tournament</div>
       </div>
     </div>
   </div>
@@ -627,7 +627,7 @@ const html = `<!DOCTYPE html>
     <div class="reg-details">
       Mallorca Padel Camp 2026 LTP Edition<br>
       August 20–23, 2026 · Tomir Portals Suites · Portals Nous, Mallorca<br>
-      4 coaching sessions · Corcuera Cup · Sunset boat trip · Airport transfers
+      5 coaching sessions · Corcuera Cup · Sunset boat trip · Airport transfers
     </div>
     <div class="partnership">
       <span>In partnership with</span>
