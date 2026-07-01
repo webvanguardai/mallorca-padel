@@ -146,7 +146,7 @@ const html = `<!DOCTYPE html>
   /* ===== PAGE 2: ITINERARY ===== */
   .itinerary {
     background: white;
-    padding: 30mm 25mm;
+    padding: 20mm 25mm;
   }
   .page-label {
     font-size: 8pt;
@@ -170,43 +170,43 @@ const html = `<!DOCTYPE html>
     color: #4a5568;
     line-height: 1.7;
     max-width: 440px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .day-card {
     display: flex;
     align-items: flex-start;
-    gap: 18px;
-    padding: 20px;
-    margin-bottom: 14px;
+    gap: 16px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border-radius: 12px;
     background: ${LIGHT};
     border-left: 4px solid ${ORANGE};
     position: relative;
   }
   .day-card .day-icon {
-    font-size: 26pt;
+    font-size: 22pt;
     flex-shrink: 0;
-    width: 44px;
+    width: 40px;
     text-align: center;
   }
   .day-card .day-info { flex: 1; }
   .day-card .day-name {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 13pt;
+    font-size: 12.5pt;
     color: ${DARK};
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   .day-card .day-events {
-    font-size: 9.5pt;
+    font-size: 9pt;
     color: #4a5568;
-    line-height: 1.6;
+    line-height: 1.55;
   }
   .schedule-note {
     font-size: 8pt;
     color: #9ca3af;
     font-style: italic;
-    margin-top: 20px;
+    margin-top: 14px;
     text-align: center;
   }
 
@@ -432,7 +432,7 @@ const html = `<!DOCTYPE html>
 <!-- PAGE 1: COVER -->
 <div class="page cover">
   <div class="cover-top">
-    <div class="cover-badge">🏸 August 20–23, 2026 · Mallorca</div>
+    <div class="cover-badge">🏸 August 18–23, 2026 · Mallorca</div>
   </div>
   <div class="cover-middle">
     <h1>
@@ -446,11 +446,11 @@ const html = `<!DOCTYPE html>
     </div>
   </div>
   <div class="cover-bottom">
-    <p class="subtitle">4 days of padel, sun and Mediterranean. Coaching sessions, sunset boat trip, Corcuera Cup and accommodation at Tomir Portals Suites.</p>
+    <p class="subtitle">6 days of padel, sun and Mediterranean. Coaching sessions, sunset boat trip, Corcuera Cup and accommodation at Tomir Portals Suites.</p>
     <div class="stats-row" style="margin-top:24px">
       <div class="stat-card">
         <div class="icon">📅</div>
-        <span class="num">4</span>
+        <span class="num">6</span>
         <span class="lbl">Days</span>
       </div>
       <div class="stat-card">
@@ -476,37 +476,53 @@ const html = `<!DOCTYPE html>
 <div class="page itinerary">
   <span class="page-label">The Tournament</span>
   <h2 class="page-title">Tournament <span class="highlight">Schedule</span></h2>
-  <p class="page-desc">The Mallorca Padel Camp LTP Edition is a 4-day experience combining top-level padel, accommodation at Tomir Portals Suites and the best of the Mediterranean.</p>
+  <p class="page-desc">The Mallorca Padel Camp LTP Edition is a 6-day experience combining top-level padel, accommodation at Tomir Portals Suites and the best of the Mediterranean.</p>
 
   <div class="day-card">
     <div class="day-icon">✈️</div>
     <div class="day-info">
-      <div class="day-name">Thursday, August 20</div>
-      <div class="day-events">Arrival at Palma de Mallorca (PMI) · Airport transfer to hotel<br>Check-in at Tomir Portals Suites · Welcome pack<br><strong style="color:${ORANGE}">1st Padel Session — 5:00pm to 7:00pm</strong></div>
+      <div class="day-name">Tuesday, August 18</div>
+      <div class="day-events">Arrival at Palma de Mallorca (PMI) · Airport transfer to hotel<br>Check-in at Tomir Portals Suites · Welcome pack</div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-icon">🏸</div>
+    <div class="day-info">
+      <div class="day-name">Wednesday, August 19</div>
+      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">Morning Session — 10:00am to 12:00pm</strong> · <strong style="color:${ORANGE}">Afternoon Session — 4:00pm to 6:00pm</strong></div>
     </div>
   </div>
 
   <div class="day-card">
     <div class="day-icon">⛵</div>
     <div class="day-info">
-      <div class="day-name">Friday, August 21</div>
-      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">2nd Padel Session — 10:00am to 12:00pm</strong><br>Free time for lunch & beach<br><strong style="color:${ORANGE}">3rd Padel Session — 4:00pm to 6:00pm</strong><br><strong style="color:${ORANGE}">Sunset Boat Trip — 7:00pm to 10:00pm</strong></div>
+      <div class="day-name">Thursday, August 20</div>
+      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">Morning Session — 10:00am to 12:00pm</strong> · <strong style="color:${ORANGE}">Afternoon Session — 4:00pm to 6:00pm</strong><br><strong style="color:${ORANGE}">Sunset Boat Trip — 7:00pm to 10:00pm</strong></div>
     </div>
   </div>
 
   <div class="day-card">
     <div class="day-icon">🏆</div>
     <div class="day-info">
-      <div class="day-name">Saturday, August 22</div>
-      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">4th Padel Session — 11:00am to 1:00pm</strong><br>Free time for lunch<br><strong style="color:${ORANGE}">Corcuera Cup Tournament — 5:00pm to 9:00pm</strong></div>
+      <div class="day-name">Friday, August 21</div>
+      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">Final Session — 11:00am to 1:00pm</strong><br><strong style="color:${ORANGE}">Corcuera Cup Tournament — 5:00pm to 9:00pm</strong></div>
     </div>
   </div>
 
   <div class="day-card">
-    <div class="day-icon">🌅</div>
+    <div class="day-icon">🗺️</div>
+    <div class="day-info">
+      <div class="day-name">Saturday, August 22</div>
+      <div class="day-events">Breakfast at hotel<br>Group excursion and leisure day exploring the best of Mallorca</div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-icon">🛫</div>
     <div class="day-info">
       <div class="day-name">Sunday, August 23</div>
-      <div class="day-events">Breakfast at hotel<br><strong style="color:${ORANGE}">5th Padel Session (Final) — 11:00am to 1:00pm</strong><br>Palma city tour<br>Airport transfer — 6:00pm</div>
+      <div class="day-events">Breakfast at hotel · Check-out<br>Airport transfer · Flight back</div>
     </div>
   </div>
 
@@ -538,7 +554,7 @@ const html = `<!DOCTYPE html>
     <div class="included-card">
       <span class="ic-icon">🏨</span>
       <div class="ic-title">Tomir Portals Suites</div>
-      <div class="ic-desc">3 nights at one of Mallorca's most exclusive 4★ hotels. Portals Nous, minutes from the sea.</div>
+      <div class="ic-desc">5 nights at one of Mallorca's most exclusive 4★ hotels. Portals Nous, minutes from the sea.</div>
     </div>
     <div class="included-card">
       <span class="ic-icon">✈️</span>
@@ -588,7 +604,7 @@ const html = `<!DOCTYPE html>
       <div class="hi-icon">📅</div>
       <div>
         <div class="hi-label">Dates</div>
-        <div class="hi-value">August 20–23, 2026 (3 nights included)<br>Check-in Thursday · Check-out Sunday</div>
+        <div class="hi-value">August 18–23, 2026 (5 nights included)<br>Check-in Tuesday · Check-out Sunday</div>
       </div>
     </div>
     <div class="hotel-info-item">
@@ -620,13 +636,13 @@ const html = `<!DOCTYPE html>
   <div class="reg-content">
     <span class="page-label" style="color:${ORANGE};text-align:center;display:block;margin-bottom:20px">Join Us</span>
     <h2 class="reg-title">Sign up for<br><span style="color:${ORANGE}">MPC 2026</span></h2>
-    <p class="reg-subtitle">Secure your spot at the Mallorca Padel Camp LTP Edition. August 20–23, 2026 · Tomir Portals Suites. Limited spots.</p>
+    <p class="reg-subtitle">Secure your spot at the Mallorca Padel Camp LTP Edition. August 18–23, 2026 · Tomir Portals Suites. Limited spots.</p>
     <div class="reg-btn">✦ REGISTER NOW</div>
     <span class="reg-url">mallorca-padel.vercel.app</span>
     <div class="reg-divider"></div>
     <div class="reg-details">
       Mallorca Padel Camp 2026 LTP Edition<br>
-      August 20–23, 2026 · Tomir Portals Suites · Portals Nous, Mallorca<br>
+      August 18–23, 2026 · Tomir Portals Suites · Portals Nous, Mallorca<br>
       5 coaching sessions · Corcuera Cup · Sunset boat trip · Airport transfers
     </div>
     <div class="partnership">

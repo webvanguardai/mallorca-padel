@@ -20,7 +20,7 @@ const bodyFont = Inter({
 export const metadata: Metadata = {
   title: "Mallorca Padel Camp 2026 LTP Edition | MPC — Agosto, Tomir Portals Suites",
   description:
-    "Mallorca Padel Camp 2026 LTP Edition — 4 días de pádel, sol y Mediterráneo. 20–23 agosto en Tomir Portals Suites. Coaching, Corcuera Cup, boat trip y transfers incluidos. ¡Plazas limitadas!",
+    "Mallorca Padel Camp 2026 LTP Edition — 6 días de pádel, sol y Mediterráneo. 18–23 agosto en Tomir Portals Suites. Coaching, Corcuera Cup, boat trip y transfers incluidos. ¡Plazas limitadas!",
   keywords: [
     "padel",
     "mallorca padel camp ltp edition",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mallorca Padel Camp 2026 LTP Edition",
     description:
-      "4 días de pádel, sol y Mediterráneo. 20–23 agosto en Tomir Portals Suites, Mallorca.",
+      "6 días de pádel, sol y Mediterráneo. 18–23 agosto en Tomir Portals Suites, Mallorca.",
     type: "website",
     locale: "es_ES",
     url: "https://mallorca-padel.vercel.app",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mallorca Padel Camp 2026 LTP Edition",
     description:
-      "4 días de pádel en Mallorca · Tomir Portals Suites · 20–23 agosto 2026.",
+      "6 días de pádel en Mallorca · Tomir Portals Suites · 18–23 agosto 2026.",
   },
   robots: {
     index: true,
