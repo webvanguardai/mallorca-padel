@@ -150,18 +150,12 @@ const es: Translations = {
     ],
     footerNote: "Todo incluido en un solo paquete. Plazas limitadas.",
     pricing: {
-      title: "Precios",
-      individual: {
-        label: "Habitación Individual",
-        price: "1.900",
+      title: "Precio",
+      full: {
+        label: "Plaza completa",
+        price: "2.300",
         currency: "€",
-        description: "Habitación de uso individual en Tomir Portals Suites",
-      },
-      shared: {
-        label: "Habitación Compartida",
-        price: "1.750",
-        currency: "€",
-        description: "Habitación de uso doble en Tomir Portals Suites",
+        description: "Todo incluido · Alojamiento en Tomir Portals Suites",
       },
       perPerson: "por persona",
     },

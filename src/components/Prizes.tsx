@@ -41,35 +41,19 @@ export default function Prizes() {
         </div>
 
         <AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
-            {/* Individual Room */}
+          <div className="max-w-sm mx-auto mb-12">
+            {/* Full package */}
             <div className="card p-8 text-center border-t-4 border-padel-orange hover:-translate-y-2 transition-all duration-500 group">
               <div className="w-14 h-14 bg-padel-orange/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">🛏️</span>
               </div>
               <h3 className="font-heading text-lg font-bold text-deep-blue mb-1">
-                {t.prizes.pricing.individual.label}
+                {t.prizes.pricing.full.label}
               </h3>
-              <p className="text-body-gray text-sm mb-4">{t.prizes.pricing.individual.description}</p>
+              <p className="text-body-gray text-sm mb-4">{t.prizes.pricing.full.description}</p>
               <div className="flex items-baseline justify-center gap-1">
-                <span className="font-heading text-4xl font-black text-padel-orange">{t.prizes.pricing.individual.price}</span>
-                <span className="text-padel-orange font-bold text-lg">{t.prizes.pricing.individual.currency}</span>
-              </div>
-              <span className="text-body-gray text-xs uppercase tracking-wider">{t.prizes.pricing.perPerson}</span>
-            </div>
-
-            {/* Shared Room */}
-            <div className="card p-8 text-center border-t-4 border-deep-blue hover:-translate-y-2 transition-all duration-500 group">
-              <div className="w-14 h-14 bg-deep-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl">🛏️</span>
-              </div>
-              <h3 className="font-heading text-lg font-bold text-deep-blue mb-1">
-                {t.prizes.pricing.shared.label}
-              </h3>
-              <p className="text-body-gray text-sm mb-4">{t.prizes.pricing.shared.description}</p>
-              <div className="flex items-baseline justify-center gap-1">
-                <span className="font-heading text-4xl font-black text-deep-blue">{t.prizes.pricing.shared.price}</span>
-                <span className="text-deep-blue font-bold text-lg">{t.prizes.pricing.shared.currency}</span>
+                <span className="font-heading text-4xl font-black text-padel-orange">{t.prizes.pricing.full.price}</span>
+                <span className="text-padel-orange font-bold text-lg">{t.prizes.pricing.full.currency}</span>
               </div>
               <span className="text-body-gray text-xs uppercase tracking-wider">{t.prizes.pricing.perPerson}</span>
             </div>

@@ -256,11 +256,13 @@ const html = `<!DOCTYPE html>
   }
   .pricing-row {
     display: flex;
+    justify-content: center;
     gap: 16px;
     margin-top: 28px;
   }
   .pricing-card {
     flex: 1;
+    max-width: 320px;
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 12px;
@@ -570,15 +572,9 @@ const html = `<!DOCTYPE html>
 
   <div class="pricing-row">
     <div class="pricing-card">
-      <div class="pc-label">Individual Room</div>
-      <div class="pc-desc">Single occupancy at Tomir Portals Suites</div>
-      <span class="pc-price">1,900</span><span class="pc-currency">€</span>
-      <span class="pc-per">per person</span>
-    </div>
-    <div class="pricing-card">
-      <div class="pc-label">Shared Room</div>
-      <div class="pc-desc">Double occupancy at Tomir Portals Suites</div>
-      <span class="pc-price">1,750</span><span class="pc-currency">€</span>
+      <div class="pc-label">Full Package</div>
+      <div class="pc-desc">All inclusive · Accommodation at Tomir Portals Suites</div>
+      <span class="pc-price">2,300</span><span class="pc-currency">€</span>
       <span class="pc-per">per person</span>
     </div>
   </div>
