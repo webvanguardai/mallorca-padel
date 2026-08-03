@@ -136,7 +136,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-padel-orange hover:underline"
             >
-              True Love Creative
+              TrueLoveCreative
             </a>
           </p>
         </div>

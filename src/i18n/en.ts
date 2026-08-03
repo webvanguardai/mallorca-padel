@@ -236,7 +236,7 @@ const en = {
     resourcesVenue: "Venue & Travel",
     contactTitle: "Contact",
     copyright: "© 2026 Mallorca Padel Camp LTP Edition. All rights reserved.",
-    builtBy: "Built by",
+    builtBy: "Site by",
   },
 };
 
